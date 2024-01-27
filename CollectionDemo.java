@@ -4,6 +4,7 @@ import java.util.List;
 
 import ec.edu.epn.saew.Exam;
 import ec.edu.epn.saew.Grading;
+import ec.edu.epn.saew.MemoryStore;
 import ec.edu.epn.saew.Student;
 import ec.edu.epn.saew.Test;
 
@@ -46,28 +47,40 @@ public class CollectionDemo {
             System.out.println("Student is not equal");
         }
 
-        //With equals
+        // With equals
         if (student1.equals(student2)) {
             System.out.println("Student is equal");
         } else {
             System.out.println("Student is not equal");
         }
 
-        List<Student> myList = new ArrayList<Student>(); 
-        // List<Student> myList = new LinkedList<>(); 
+        List<Student> myList = new LinkedList<Student>();
+        // List<Student> myList = new LinkedList<>();
         myList.add(student1);
         myList.add(student2);
 
-        //Polimorfismo
-        Grading exam = new Exam();
-        System.out.println("Exam: " + exam.grade());
+        // Polimorfismo
+        Grading gradingExam = new Exam();
+        // System.out.println("Exam: " + exam.grade());
 
-        Grading test = new Test();
-        System.out.println("Test: " + test.grade());
+        Grading gradingTest = new Test();
+        // System.out.println("Test: " + test.grade());
+
+        // Grading grading = new Exam();
+        // grading.grade();
 
         /**
          * Login logging = new MQLogger();
          * logging.log("Log de mi aplicacion");
          */
+
+        // MemoryStore<Grading> memoryStore = new MemoryStore<Grading>(); ó
+        MemoryStore<Grading> memoryStore = new MemoryStore<>();
+        memoryStore.add(gradingExam);
+        memoryStore.add(gradingTest);
+
+        // MemoryStore<ArraList<String>> memoryStore = new MemoryStore<>(); //ya no me
+        // deja instanciarlo por el metodo de la clase memorystore.
+
     }
 }

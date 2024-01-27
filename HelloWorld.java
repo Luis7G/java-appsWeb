@@ -21,5 +21,7 @@ class HelloWorld {
 
         Student student = new Student("John Doe", "Computer Science");
         student.printInfo();
+
+        // Descargar .jar de joda time Y COLOCAR EN CARPETA LIB.
     }
 }

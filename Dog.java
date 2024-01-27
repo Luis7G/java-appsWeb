@@ -21,4 +21,11 @@ public class Dog extends Animal {
     public void searchFood(int timeAvailable, String foodName) {
         System.out.println("Search Food: " + timeAvailable + " foodName: " + foodName);
     }
+
+    @Override
+    public void run() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'run'");
+    }
+    //Colocar diferencias entre interfaces y abstractas
 }
